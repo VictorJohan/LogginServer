@@ -1,5 +1,5 @@
 ﻿@page "/counter"
-
+@using Serilog
 <h1>Counter</h1>
 
 <p>Current count: @currentCount</p>
@@ -9,8 +9,12 @@
 @code {
     private int currentCount = 0;
 
+
+
     private void IncrementCount()
     {
+
+        Log.Error("Hi, I'm a log.");
         currentCount++;
     }
 }
